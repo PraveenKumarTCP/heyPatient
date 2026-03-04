@@ -41,7 +41,7 @@ export const Header = () => {
         <header
             className={`w-full z-100 transition-all duration-500 bg-white ${isScrolled
                 ? "fixed top-0 left-0 right-0 shadow-lg py-3 translate-y-0 animate-in slide-in-from-top duration-500"
-                : "absolute top-0 py-6"
+                : "absolute top-0 py-3"
                 }`}
         >
             <div className="site-container">
@@ -58,7 +58,7 @@ export const Header = () => {
                                     <Link
                                         key={link.label}
                                         href={link.href}
-                                        className={`font-bold tracking-wide transition-colors duration-300 ${isActive ? "text-[#08949E]" : "text-[#1E293B] hover:text-[#08949E]"
+                                        className={`font-medium tracking-wide transition-colors duration-300 ${isActive ? "text-[#08949E] font-bold!" : "text-[#1E293B] hover:text-[#08949E]"
                                             }`}
                                     >
                                         {link.label}
@@ -69,7 +69,9 @@ export const Header = () => {
 
                         <div className="hidden lg:flex items-center gap-3">
                             <div className="flex items-center gap-1.5 font-bold text-[#1E293B] bg-[#F1F5F9] hover:bg-gray-200 transition-colors rounded-md px-3 py-1.5 cursor-pointer">
-                                <span className="text-[14px] leading-none">🇬🇧</span>
+                                <div className="text-[16px] leading-none rounded-full">
+                                    <img src="/images/home/usa.png" alt="" className='w-5 h-5 rounded-full' />
+                                </div>
                                 <span>EN</span>
                                 <span className="text-[8px] ml-0.5 mt-0.5">▼</span>
                             </div>
@@ -78,12 +80,16 @@ export const Header = () => {
                                     <Button
                                         variant="outline"
                                         className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto border-gray-300 text-gray-700 hover:bg-gray-50 transition-all"
+                                        href="https://heypatient.clinicalvisuals.com"
+                                        target='_blank'
                                     >
                                         Login
                                     </Button>
                                     <Button
                                         variant="primary"
                                         className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto transition-all"
+                                        href="https://heypatient.clinicalvisuals.com"
+                                        target='_blank'
                                     >
                                         Free Trial
                                     </Button>
@@ -127,10 +133,10 @@ export const Header = () => {
                     })}
                     {isVisualPage ? (
                         <div className="flex flex-col gap-3 pt-2">
-                            <Button variant="outline" className="w-full justify-center">
+                            <Button variant="outline" className="w-full justify-center" href="https://heypatient.clinicalvisuals.com/login" target='_blank'>
                                 Login
                             </Button>
-                            <Button variant="primary" className="w-full justify-center">
+                            <Button variant="primary" className="w-full justify-center" href="https://heypatient.clinicalvisuals.com/register" target='_blank'>
                                 Free Trial
                             </Button>
                         </div>

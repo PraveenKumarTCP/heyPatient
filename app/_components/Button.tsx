@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
     size?: 'sm' | 'md' | 'lg';
     children: React.ReactNode;
+    href?: string;
+    target?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -11,6 +14,8 @@ export const Button: React.FC<ButtonProps> = ({
     size = 'md',
     className = '',
     children,
+    href,
+    target,
     ...props
 }) => {
     const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
@@ -28,12 +33,30 @@ export const Button: React.FC<ButtonProps> = ({
         lg: "px-8 py-4 text-lg",
     };
 
+    const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+    if (href) {
+        if (href.startsWith('http') || target === '_blank') {
+            return (
+                <a href={href} target={target} className={combinedClassName}>
+                    {children}
+                </a>
+            );
+        }
+        return (
+            <Link href={href} className={combinedClassName}>
+                {children}
+            </Link>
+        );
+    }
+
     return (
         <button
-            className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+            className={combinedClassName}
             {...props}
         >
             {children}
         </button>
     );
 };
+

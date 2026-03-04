@@ -48,7 +48,7 @@ export const Departments = () => {
                             ))}
 
                             {/* 6th Card: Explore Medical Department */}
-                            <div className="bg-[#08949E] text-white p-8 rounded-xl shadow-lg transition-transform duration-300 relative overflow-hidden h-[16rem] group">
+                            <div className="bg-[#036870] text-white p-8 rounded-xl shadow-lg transition-transform duration-300 relative overflow-hidden h-[16rem] group">
                                 <div className="relative z-10 h-full flex flex-col justify-start">
                                     <h4 className="text-xl text-white! font-bold mb-6 mt-2 max-w-[80%] leading-tight">Explore Medical<br />Department</h4>
                                     <button className="bg-white text-[#08949E] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max hover:bg-gray-100 transition-colors">
