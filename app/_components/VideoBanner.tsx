@@ -26,7 +26,7 @@ export const VideoBanner = () => {
 
                         {/* Right Side: Text Content */}
                         <div data-aos="fade-left" data-aos-duration="1000" className="flex flex-col">
-                            <h3 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#008A8A] leading-tight mb-8">
+                            <h3 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#08949E] leading-tight mb-8">
                                 The Patient Portal that simplifies your<br className="hidden md:block" /> everyday work.
                             </h3>
 
@@ -35,7 +35,7 @@ export const VideoBanner = () => {
                             </p>
 
                             <div className="flex justify-start">
-                                <button className="bg-[#008A8A] text-white rounded-full px-8 py-3 flex items-center gap-2 text-[14px] font-bold hover:bg-[#007373] transition-all">
+                                <button className="bg-[#08949E] text-white rounded-full px-8 py-3 flex items-center gap-2 text-[14px] font-bold hover:bg-[#067a82] transition-all">
                                     <span>Start Now</span>
                                     <ArrowUpRight className="w-5 h-5 text-white" />
                                 </button>

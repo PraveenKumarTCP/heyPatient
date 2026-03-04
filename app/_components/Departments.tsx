@@ -17,7 +17,7 @@ export const Departments = () => {
     return (
         <section className="py-4">
             <div className="site-container">
-                <div className="bg-[#008A8A] rounded-[2rem] text-white py-12 relative overflow-hidden">
+                <div className="bg-[#08949E] rounded-[2rem] text-white py-12 relative overflow-hidden">
                     {/* Background Image and Overlay */}
                     <div className="absolute inset-0 z-0">
                         <img
@@ -25,13 +25,13 @@ export const Departments = () => {
                             alt="Background"
                             className="w-full h-full object-cover opacity-30"
                         />
-                        <div className="absolute inset-0 bg-[#008A8A] mix-blend-multiply opacity-90"></div>
+                        <div className="absolute inset-0 bg-[#08949E] mix-blend-multiply opacity-90"></div>
                     </div>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12 relative z-10" data-aos="fade-up">
-                            <h2 className="text-white font-medium mb-2 text-[15px]">Discover Our Specialized Departments</h2>
-                            <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-semibold max-w-2xl mx-auto leading-tight">
+                            <h2 className="text-white! font-medium mb-2 text-[15px]">Discover Our Specialized Departments</h2>
+                            <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-semibold max-w-2xl mx-auto leading-tight text-white!">
                                 A Comprehensive Digital Patient Portal for Seamless Access to Your Care
                             </h3>
                         </div>
@@ -48,10 +48,10 @@ export const Departments = () => {
                             ))}
 
                             {/* 6th Card: Explore Medical Department */}
-                            <div className="bg-[#005454] text-white p-8 rounded-xl shadow-lg transition-transform duration-300 relative overflow-hidden h-[16rem] group">
+                            <div className="bg-[#08949E] text-white p-8 rounded-xl shadow-lg transition-transform duration-300 relative overflow-hidden h-[16rem] group">
                                 <div className="relative z-10 h-full flex flex-col justify-start">
                                     <h4 className="text-xl text-white! font-bold mb-6 mt-2 max-w-[80%] leading-tight">Explore Medical<br />Department</h4>
-                                    <button className="bg-white text-[#008A8A] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max hover:bg-gray-100 transition-colors">
+                                    <button className="bg-white text-[#08949E] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max hover:bg-gray-100 transition-colors">
                                         Visit our Portal <ArrowUpRight className="w-4 h-4" />
                                     </button>
                                 </div>
@@ -69,8 +69,8 @@ export const Departments = () => {
                                     640: { slidesPerView: 2 },
                                 }}
                                 pagination={{ clickable: true }}
-                                autoplay={{ delay: 3000 }}
-                                className="pb-12"
+                                autoplay={{ delay: 5000 }}
+                                className="pb-12 cursor-pointer"
                             >
                                 {departments.map((dept, idx) => (
                                     <SwiperSlide key={idx}>
@@ -84,9 +84,9 @@ export const Departments = () => {
                                     </SwiperSlide>
                                 ))}
                                 <SwiperSlide>
-                                    <div className="bg-[#005454] text-white p-6 rounded-xl shadow-lg text-left h-full flex flex-col justify-between relative overflow-hidden">
+                                    <div className="bg-[#08949E] text-white p-6 rounded-xl shadow-lg text-left h-full flex flex-col justify-between relative overflow-hidden">
                                         <h4 className="text-lg font-bold mb-4 relative z-10">Explore Medical<br />Department</h4>
-                                        <button className="bg-white text-[#008A8A] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max relative z-10">
+                                        <button className="bg-white text-[#08949E] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max relative z-10">
                                             Visit our Portal <ArrowUpRight className="w-4 h-4" />
                                         </button>
                                         <img src="/images/home/medical-dr.png" alt="Doctor" className="absolute -bottom-4 -right-4 w-32 object-contain opacity-50" />

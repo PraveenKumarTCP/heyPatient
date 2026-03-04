@@ -20,7 +20,7 @@ export const Logos = () => {
                         Leading healthcare providers trust us:
                     </h3>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 items-center max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 items-center mx-auto" data-aos="fade-up" data-aos-delay="200">
                         {logos.map((logo, index) => (
                             <div key={index} className="flex justify-center">
                                 <img src={logo} alt="Healthcare Provider" className="h-12 md:h-16 w-auto object-contain opacity-80" />

@@ -2,16 +2,20 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Activity, Menu, X, Globe } from "lucide-react";
 import { Button } from "./Button";
 
 export const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    const isVisualPage = pathname === "/heyPatient-visuals";
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 120) {
+            if (window.scrollY > 200) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -35,7 +39,9 @@ export const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? "shadow-md py-3" : "py-5"
+            className={`w-full z-100 transition-all duration-500 bg-white ${isScrolled
+                ? "fixed top-0 left-0 right-0 shadow-lg py-3 translate-y-0 animate-in slide-in-from-top duration-500"
+                : "absolute top-0 py-6"
                 }`}
         >
             <div className="site-container">
@@ -43,19 +49,22 @@ export const Header = () => {
                     <div className="flex items-center justify-between">
                         <Link href="/" className="flex items-center gap-2">
                             <img src="/images/home/logo.png" alt="Hey Patient" className="h-12 object-contain" />
-
                         </Link>
 
                         <nav className="hidden lg:flex items-center space-x-5 xl:space-x-7">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.label}
-                                    href={link.href}
-                                    className={`font-bold tracking-wide transition-colors ${link.label === 'Home' ? 'text-[#008A8A]' : 'text-[#1E293B] hover:text-[#008A8A]'}`}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+                                return (
+                                    <Link
+                                        key={link.label}
+                                        href={link.href}
+                                        className={`font-bold tracking-wide transition-colors duration-300 ${isActive ? "text-[#08949E]" : "text-[#1E293B] hover:text-[#08949E]"
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                );
+                            })}
                         </nav>
 
                         <div className="hidden lg:flex items-center gap-3">
@@ -64,16 +73,36 @@ export const Header = () => {
                                 <span>EN</span>
                                 <span className="text-[8px] ml-0.5 mt-0.5">▼</span>
                             </div>
-                            <Button variant="primary" className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto">
-                                Contact Us
-                            </Button>
+                            {isVisualPage ? (
+                                <>
+                                    <Button
+                                        variant="outline"
+                                        className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto border-gray-300 text-gray-700 hover:bg-gray-50 transition-all"
+                                    >
+                                        Login
+                                    </Button>
+                                    <Button
+                                        variant="primary"
+                                        className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto transition-all"
+                                    >
+                                        Free Trial
+                                    </Button>
+                                </>
+                            ) : (
+                                <Button
+                                    variant="primary"
+                                    className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto transition-all"
+                                >
+                                    Contact Us
+                                </Button>
+                            )}
                         </div>
 
                         <button
-                            className="lg:hidden text-gray-700"
+                            className="lg:hidden text-gray-700 hover:text-[#08949E] transition-colors"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         >
-                            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
                         </button>
                     </div>
                 </div>
@@ -81,23 +110,39 @@ export const Header = () => {
 
             {/* Mobile menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 py-4 px-4 flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.label}
-                            href={link.href}
-                            className="block text-sm font-medium text-gray-700 hover:text-[#008A8A]"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
-                    <Button variant="primary" className="w-full">
-                        Contact Us
-                    </Button>
+                <div className="lg:hidden bg-white shadow-2xl absolute top-full left-0 right-0 py-6 px-6 flex flex-col space-y-5 animate-in fade-in slide-in-from-top-4 duration-300">
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
+                        return (
+                            <Link
+                                key={link.label}
+                                href={link.href}
+                                className={`block text-[15px] font-bold transition-colors ${isActive ? "text-[#08949E]" : "text-gray-700 hover:text-[#08949E]"
+                                    }`}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {link.label}
+                            </Link>
+                        );
+                    })}
+                    {isVisualPage ? (
+                        <div className="flex flex-col gap-3 pt-2">
+                            <Button variant="outline" className="w-full justify-center">
+                                Login
+                            </Button>
+                            <Button variant="primary" className="w-full justify-center">
+                                Free Trial
+                            </Button>
+                        </div>
+                    ) : (
+                        <div className="pt-2">
+                            <Button variant="primary" className="w-full justify-center">
+                                Contact Us
+                            </Button>
+                        </div>
+                    )}
                 </div>
             )}
         </header>
     );
 };
-

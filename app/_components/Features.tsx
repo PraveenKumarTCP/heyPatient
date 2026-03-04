@@ -10,7 +10,7 @@ export const Features = () => {
 
                     {/* Header text spanning full width */}
                     <div className="mb-12 max-w-5xl" data-aos="fade-up">
-                        <h2 className="text-[#008A8A]! font-bold text-[18px] mb-6">About Heypatients</h2>
+                        <h2 className="text-[#08949E]! font-bold text-[18px] mb-6">About Heypatients</h2>
                         <h3 className="text-[24px] md:text-[32px] font-bold text-[#1E293B] leading-[1.3] tracking-tight">
                             The company offers a modern patient portal that streamlines the entire care journey from appointment scheduling and digital registration to automated reminders and secure information sharing.
                         </h3>
@@ -37,14 +37,14 @@ export const Features = () => {
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                                <div className="bg-[#008A8A] text-white p-10 rounded-xl flex flex-col items-center justify-center text-center shadow-md">
+                                <div className="bg-[#08949E] text-white p-10 rounded-xl flex flex-col items-center justify-center text-center shadow-md">
                                     <div className="w-20 h-20 mb-6 flex items-center justify-center">
                                         <img src="/images/home/abt-1.png" alt="Accident Icon" className="w-full h-full object-contain brightness-0 invert" />
                                     </div>
                                     <h4 className="font-bold text-white! leading-tight">Accident<br />Broken Arm</h4>
                                 </div>
 
-                                <div className="bg-[#008A8A] text-white p-10 rounded-xl flex flex-col items-center justify-center text-center shadow-md">
+                                <div className="bg-[#08949E] text-white p-10 rounded-xl flex flex-col items-center justify-center text-center shadow-md">
                                     <div className="w-20 h-20 mb-6 flex items-center justify-center">
                                         <img src="/images/home/abt-2.png" alt="Forms Icon" className="w-full h-full object-contain brightness-0 invert" />
                                     </div>
@@ -53,7 +53,7 @@ export const Features = () => {
                             </div>
 
                             <div className="flex justify-start">
-                                <button className="bg-[#008A8A] text-white rounded-full px-8 py-3 flex items-center gap-2 text-[14px] font-bold hover:bg-[#007373] transition-all flex-row-reverse">
+                                <button className="bg-[#08949E] text-white rounded-full px-8 py-3 flex items-center gap-2 text-[14px] font-bold hover:bg-[#067a82] transition-all flex-row-reverse">
                                     <ArrowUpRight className="w-5 h-5 text-white" />
                                     <span>Know More</span>
                                 </button>
