@@ -68,13 +68,16 @@ export const Departments = () => {
                                 breakpoints={{
                                     640: { slidesPerView: 2 },
                                 }}
-                                pagination={{ clickable: true }}
+                                pagination={{
+                                    clickable: true,
+                                    el: '.dept-swiper-pagination'
+                                }}
                                 autoplay={{ delay: 5000 }}
-                                className="pb-12 cursor-pointer"
+                                className="pb-12 cursor-pointer testimonial-swiper"
                             >
                                 {departments.map((dept, idx) => (
                                     <SwiperSlide key={idx}>
-                                        <div className="bg-white text-[#1E293B] p-6 rounded-xl shadow-lg text-center h-full flex flex-col items-center">
+                                        <div className="bg-white text-[#1E293B] p-6 rounded-xl shadow-lg text-center h-[200px] flex flex-col items-center justify-center">
                                             <div className="flex justify-center mb-4 h-12">
                                                 <img src={dept.img} alt={dept.title} className="object-contain h-full" />
                                             </div>
@@ -84,7 +87,7 @@ export const Departments = () => {
                                     </SwiperSlide>
                                 ))}
                                 <SwiperSlide>
-                                    <div className="bg-[#08949E] text-white p-6 rounded-xl shadow-lg text-left h-full flex flex-col justify-between relative overflow-hidden">
+                                    <div className="bg-[#08949E] text-white p-6 rounded-xl shadow-lg text-left h-[200px] flex flex-col justify-between relative overflow-hidden">
                                         <h4 className="text-lg font-bold mb-4 relative z-10">Explore Medical<br />Department</h4>
                                         <button className="bg-white text-[#08949E] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max relative z-10">
                                             Visit our Portal <ArrowUpRight className="w-4 h-4" />
@@ -92,11 +95,33 @@ export const Departments = () => {
                                         <img src="/images/home/medical-dr.png" alt="Doctor" className="absolute -bottom-4 -right-4 w-32 object-contain opacity-50" />
                                     </div>
                                 </SwiperSlide>
+
+                                {/* Custom Pagination Container */}
+                                <div className="dept-swiper-pagination flex justify-center gap-2.5 absolute bottom-0 left-0 right-0 z-30 pointer-events-auto"></div>
                             </Swiper>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <style jsx global>{`
+                .dept-swiper-pagination .swiper-pagination-bullet {
+                    background: white !important;
+                    opacity: 0.35 !important;
+                    width: 7px !important;
+                    height: 7px !important;
+                    margin: 0 !important;
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    border-radius: 50% !important;
+                    cursor: pointer !important;
+                    display: inline-block !important;
+                }
+                .dept-swiper-pagination .swiper-pagination-bullet-active {
+                    opacity: 1 !important;
+                    width: 24px !important;
+                    border-radius: 6px !important;
+                }
+            `}</style>
         </section>
     );
 };

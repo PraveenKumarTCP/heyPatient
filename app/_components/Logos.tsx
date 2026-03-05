@@ -13,7 +13,7 @@ const logos = [
 ];
 export const Logos = () => {
     return (
-        <section className="py-20 bg-white">
+        <section className=" pb-12 lg:py-20 bg-white">
             <div className="site-container">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <h3 className="text-center text-[20px] md:text-[24px] font-bold text-[#1E293B] mb-12" data-aos="fade-up">

@@ -54,16 +54,15 @@ h6 {
   font-weight: 700;
 }
 
+.site-container {
+  padding-inline: calc(var(--spacing) * 4);
+  margin-inline: auto;
+}
 
-@media (min-width: 64rem) {
+@media (min-width: 780px) {
   .site-container {
     padding-inline: calc(var(--spacing) * 15);
   }
-}
-
-.site-container {
-  padding-inline: calc(var(--spacing) * 12);
-  margin-inline: auto;
 }
 
 /* Custom Styles from Untitled-1 */

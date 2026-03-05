@@ -4,14 +4,14 @@ import { ArrowUpRight } from 'lucide-react';
 
 export const Features = () => {
     return (
-        <section className="py-20 bg-white" id="about">
+        <section className="py-6 lg:py-20 bg-white scroll-mt-24" id="about">
             <div className="site-container">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                     {/* Header text spanning full width */}
                     <div className="mb-12 max-w-5xl" data-aos="fade-up">
-                        <h2 className="text-[#08949E]! font-bold text-[22px]! mb-6">About Heypatients</h2>
-                        <h3 className="text-[24px] md:text-[32px] font-bold! text-[#1E293B] leading-[1.3] tracking-tight">
+                        <h2 className="text-[#08949E]! font-bold text-[22px]! mb-6 text-center lg:text-left">About Heypatients</h2>
+                        <h3 className="text-[22px] md:text-[32px] font-bold! text-[#1E293B] leading-[1.3] tracking-tight text-justify lg:text-left">
                             The company offers a modern patient portal that streamlines the entire care journey from appointment scheduling and digital registration to automated reminders and secure information sharing.
                         </h3>
                     </div>
@@ -32,7 +32,7 @@ export const Features = () => {
 
                         {/* Right Column: Text & Cards */}
                         <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" className="flex flex-col pt-4">
-                            <p className="text-[#64748B] text-[15px] mb-10 leading-[1.6] max-w-[480px]">
+                            <p className="text-[#64748B] mb-10 leading-[1.6] max-w-[480px] text-justify lg:text-left">
                                 HeyPatient helps hospitals and clinics reduce administrative workload while enhancing patient engagement and satisfaction.
                             </p>
 

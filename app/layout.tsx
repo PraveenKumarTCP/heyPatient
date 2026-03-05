@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { AosInit } from "./_components/AosInit";
+import { ScrollToTop } from "./_components/ScrollToTop";
 
 export const metadata: Metadata = {
   icons: {
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className="antialiased selection:bg-[#08949E] selection:text-white flex flex-col min-h-screen pt-20"
       >
+        <ScrollToTop />
         <AosInit />
         <Header />
         <main className="flex-grow">

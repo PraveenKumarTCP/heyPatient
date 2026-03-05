@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export const VideoBanner = () => {
     return (
-        <section className="py-20 bg-white relative overflow-hidden">
+        <section className=" py-6 lg:py-20 bg-white relative overflow-hidden">
             <div className="site-container">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

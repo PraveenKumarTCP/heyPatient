@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <footer className="relative">
             {/* Teal Footer Section */}
-            <div className="site-container relative overflow-hidden rounded-t-[2.5rem]">
+            <div className="site-container relative overflow-hidden ">
                 <div className="bg-[#08949E] text-white pt-24 pb-6 relative overflow-hidden border border-0.5 border-gray-200/20">
 
                     <img src="/images/home/f-bg.png" className="absolute -top-0.5 left-0 w-full h-30 object-cover z-1" alt="" />
@@ -102,7 +102,7 @@ export const Footer = () => {
                             <p className="text-white! font-medium text-[15px]!">
                                 © 2026 All Rights Reserved
                             </p>
-                            <div className="flex gap-10 text-white font-medium">
+                            <div className="flex flex-wrap gap-2 lg:gap-10 text-white font-medium">
                                 <Link href="#" className="hover:underline underline-offset-4">Imprint</Link>
                                 <Link href="#" className="hover:underline underline-offset-4">Privacy policy</Link>
                                 <Link href="#" className="hover:underline underline-offset-4">Terms of Use</Link>

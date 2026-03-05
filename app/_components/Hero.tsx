@@ -17,8 +17,8 @@ export const Hero = () => {
     return (
         <section className="py-6">
             <div className="site-container">
-                <div className=" overflow-hidden rounded-xl md:rounded-2xl lg:rounded-3xl">
-                    <div className="relative w-full h-screen bg-black ">
+                <div className="overflow-hidden rounded-xl md:rounded-2xl lg:rounded-3xl">
+                    <div className="relative w-full h-[600px] md:h-screen bg-black ">
                         {/* Video Background */}
                         <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
                             <video

@@ -78,14 +78,14 @@ export const Testimonial = () => {
                                         {/* Left Side: Text Area */}
                                         <div className="lg:col-span-7" data-aos="fade-right">
                                             <div className="mb-8">
-                                                <h4 className="text-white! text-[18px] md:text-[22px] font-medium mb-3 opacity-90">Testimonials</h4>
-                                                <h2 className="text-[24px] md:text-[32px] lg:text-[36px] font-bold text-white! leading-tight">
+                                                <h4 className="text-white! text-[18px] md:text-[22px] font-medium mb-3 text-center lg:text-left">Testimonials</h4>
+                                                <h2 className="text-[24px] md:text-[32px] lg:text-[36px] font-bold text-white! leading-tight text-center lg:text-left">
                                                     Why Our Clients Continue to<br className="hidden md:block" /> Love Working With Us
                                                 </h2>
                                             </div>
 
-                                            <div className="bg-white text-[#334155] p-10 lg:p-12 rounded-r-[1.5rem] lg:rounded-r-none rounded-l-[1.5rem] shadow-none relative lg:-mr-12 z-20">
-                                                <div className="whitespace-pre-line text-[16px] md:text-[16px] leading-[1.7] mb-10 text-gray-600 font-medium">
+                                            <div className="bg-white text-[#334155] p-5 lg:p-12 rounded-r-[1.5rem] lg:rounded-r-none rounded-l-[1.5rem] shadow-none relative lg:-mr-12 z-20">
+                                                <div className="whitespace-pre-line text-[16px] md:text-[16px] leading-[1.7] mb-10 text-gray-600 font-medium text-justify lg:text-left">
                                                     {item.content}
                                                 </div>
                                                 <div className="space-y-1">
@@ -100,7 +100,7 @@ export const Testimonial = () => {
                                         </div>
 
                                         {/* Right Side: Portrait Image Area */}
-                                        <div className="lg:col-span-5 flex" data-aos="fade-left">
+                                        <div className="hidden lg:block lg:col-span-5 flex" data-aos="fade-left">
                                             <div className="relative w-full max-w-[450px] h-[650px] rounded-[1.5rem] overflow-hidden">
                                                 <img
                                                     src={item.image}
