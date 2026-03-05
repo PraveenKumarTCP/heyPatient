@@ -80,7 +80,7 @@ export const Header = () => {
                                     <Button
                                         variant="outline"
                                         className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto border-gray-300 text-gray-700 hover:bg-gray-50 transition-all"
-                                        href="https://heypatient.clinicalvisuals.com"
+                                        href="https://heypatient.clinicalvisuals.com/login"
                                         target='_blank'
                                     >
                                         Login
@@ -88,7 +88,7 @@ export const Header = () => {
                                     <Button
                                         variant="primary"
                                         className="px-5 py-1.5 rounded-md font-semibold whitespace-nowrap h-auto transition-all"
-                                        href="https://heypatient.clinicalvisuals.com"
+                                        href="https://heypatient.clinicalvisuals.com/freetrial"
                                         target='_blank'
                                     >
                                         Free Trial
@@ -136,7 +136,7 @@ export const Header = () => {
                             <Button variant="outline" className="w-full justify-center" href="https://heypatient.clinicalvisuals.com/login" target='_blank'>
                                 Login
                             </Button>
-                            <Button variant="primary" className="w-full justify-center" href="https://heypatient.clinicalvisuals.com/register" target='_blank'>
+                            <Button variant="primary" className="w-full justify-center" href="https://heypatient.clinicalvisuals.com/freetrial" target='_blank'>
                                 Free Trial
                             </Button>
                         </div>
