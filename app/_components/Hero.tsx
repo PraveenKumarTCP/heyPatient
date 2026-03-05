@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import { Button } from './Button';
 
 const bannerVideos = [
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_01.webm",
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_02.webm",
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_03.webm",
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_04.webm",
+    "https://cdn.clinicalvisuals.com/medical/heypatient/video_1.webm"
 ];
 
 export const Hero = () => {

@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 export const Testimonial = () => {
     const testimonials = [
@@ -20,25 +20,25 @@ export const Testimonial = () => {
             content: "As a leading tertiary care hospital in Switzerland, we use the patient portal from heyPatient. In our new building, Agnes, we rely on their smart patient call system, which is redefining efficiency and the patient experience. This sets new standards in patient guidance and support.\n\nThe experts at heyPatient excel in high-level process automation and develop practical solutions in co-creation with hospital professionals. They are visionary, always open to feedback, and willing to go the extra mile. heyPatient is a reliable partner, and we look forward to continued collaboration and future innovations."
         },
         {
-            name: "Prof. Sarah Jenkins",
-            role: "Chief Medical Officer",
-            hospital: "Zurich Health Center",
-            image: "/images/home/medical-dr.png",
-            content: "Implementation of the heyPatient portal has significantly reduced our administrative overhead. The automated registration process is seamless, allowing our clinical staff to focus more on direct patient care. Their commitment to data security and user-friendly design makes them a standout partner in digital health."
+            name: "Adriano Mari",
+            role: "CEO",
+            hospital: "Swiss Medical Care Compass",
+            image: "/images/home/testimonials-2.png",
+            content: "The start of our collaboration with heyPatient was shaped through joint design workshops.\nFrom our digitalization initiative, a holistic target vision emerged for a modern digital patient experience, including a refreshed appearance, structured digital onboarding and seamless end to end processes.Today, we use a fully branded heyPatient app with dedicated functionalities as well as an integrated web registration, both enhanced with a Patient Concierge bot and tailored to our international patients.\n\nThe expertise of heyPatient in integrating third party systems is particularly valuable, supporting both internal automation and patient facing features. The collaboration is based on partnership, solution oriented thinking and continuously delivers new impulses for innovative offerings in the market."
         },
         {
-            name: "Markus Weber",
-            role: "Head of Digital Transformation",
-            hospital: "Swiss Orthopedic Clinic",
-            image: "/images/home/doctor.png",
-            content: "We were looking for a modular solution that could scale with our growing patient base. heyPatient delivered a platform that is not only robust but also extremely flexible. The 21-language support is crucial for our international patient demographic, ensuring every visitor feels understood and well-guided."
+            name: "René Künzli",
+            role: "Head of Services",
+            hospital: "Swiss Paraplegic Center",
+            image: "/images/home/testimonials-3.png",
+            content: "Enabling our patients to plan their stay online is a logical step in our digitalization strategy.\n\nheyPatient offers a convincing solution for this."
         },
         {
-            name: "Dr. Elena Rossi",
-            role: "Director of Patient Experience",
-            hospital: "Geneva Medical Group",
-            image: "/images/home/medical-dr.png",
-            content: "The feedback from our patients has been overwhelmingly positive since we launched heyPatient. The intuitive interface and the convenience of managing appointments from their mobile devices have greatly improved our patient satisfaction scores. It truly is a 360-degree solution for modern healthcare needs."
+            name: "Dr. Justus von Grone",
+            role: "Managing Director",
+            hospital: "CSI-HSG, Universität St. Gallen",
+            image: "/images/home/testimonials-4.png",
+            content: "As part of the Partnership Catalyst Program, which we had the opportunity to implement together with the Swiss Agency for Development and Cooperation (SCD), we worked closely with heyPatient. The collaboration was enriching in every respect and marked by a high level of professionalism.\n\nWe were impressed by the precision and reliability with which the heyPatient team operated.\n\nCombined with their strong technical expertise and a clear understanding of economic feasibility, heyPatient made a significant contribution to the success of the program."
         }
     ];
 
@@ -50,20 +50,14 @@ export const Testimonial = () => {
                     {/* Background Motifs (Hexagons and Plus signs) */}
                     <div className="absolute inset-0 z-0">
                         {/* Hexagon Pattern Placeholder / Overlay */}
-                        <div className="absolute inset-0 opacity-10 bg-[url('/images/home/bg-overlay.jpg')] bg-repeat mix-blend-overlay"></div>
-                        <div className="absolute inset-0 bg-[#08949E] mix-blend-multiply opacity-80"></div>
-
-                        {/* Plus Signs (Right side motif from screenshot) */}
-                        <div className="absolute right-[-50px] top-1/2 -translate-y-1/2 w-1/2 h-full flex flex-wrap content-center justify-center gap-16 rotate-12 pointer-events-none">
-                            {[...Array(6)].map((_, i) => (
-                                <div key={i} className="text-8xl font-thin opacity-10 select-none">+</div>
-                            ))}
-                        </div>
+                        <div className="absolute inset-0 bg-[url('/images/home/testimonials-bg.png')] bg-cover"></div>
                     </div>
 
                     <div className="container mx-auto px-4 sm:px-10 lg:px-20 relative z-10 w-full">
                         <Swiper
-                            modules={[Pagination, Autoplay]}
+                            modules={[Pagination, Autoplay, EffectFade]}
+                            effect="fade"
+                            fadeEffect={{ crossFade: true }}
                             spaceBetween={50}
                             slidesPerView={1}
                             loop={true}
@@ -84,21 +78,21 @@ export const Testimonial = () => {
                                         {/* Left Side: Text Area */}
                                         <div className="lg:col-span-7" data-aos="fade-right">
                                             <div className="mb-8">
-                                                <h4 className="text-white! text-[16px] font-medium mb-3 opacity-90">Testimonials</h4>
+                                                <h4 className="text-white! text-[18px] md:text-[22px] font-medium mb-3 opacity-90">Testimonials</h4>
                                                 <h2 className="text-[24px] md:text-[32px] lg:text-[36px] font-bold text-white! leading-tight">
                                                     Why Our Clients Continue to<br className="hidden md:block" /> Love Working With Us
                                                 </h2>
                                             </div>
 
                                             <div className="bg-white text-[#334155] p-10 lg:p-12 rounded-r-[1.5rem] lg:rounded-r-none rounded-l-[1.5rem] shadow-none relative lg:-mr-12 z-20">
-                                                <div className="whitespace-pre-line text-[14px] md:text-[15px] leading-[1.7] mb-10 text-gray-600 font-medium">
+                                                <div className="whitespace-pre-line text-[16px] md:text-[16px] leading-[1.7] mb-10 text-gray-600 font-medium">
                                                     {item.content}
                                                 </div>
                                                 <div className="space-y-1">
-                                                    <p className="font-bold text-[#08949E] text-[15px]">
+                                                    <p className="font-bold text-[#08949E]!">
                                                         {item.name}, {item.role}
                                                     </p>
-                                                    <p className="text-[#08949E] text-[15px] font-bold">
+                                                    <p className="text-[#08949E]! font-bold">
                                                         {item.hospital}
                                                     </p>
                                                 </div>
@@ -106,8 +100,8 @@ export const Testimonial = () => {
                                         </div>
 
                                         {/* Right Side: Portrait Image Area */}
-                                        <div className="lg:col-span-5 flex justify-center lg:justify-end" data-aos="fade-left">
-                                            <div className="relative w-full max-w-[420px] h-[520px] rounded-[1.5rem] overflow-hidden shadow-xl bg-[#067a82]">
+                                        <div className="lg:col-span-5 flex" data-aos="fade-left">
+                                            <div className="relative w-full max-w-[450px] h-[650px] rounded-[1.5rem] overflow-hidden">
                                                 <img
                                                     src={item.image}
                                                     alt={item.name}

@@ -83,13 +83,13 @@ export const Footer = () => {
                                 <div className="flex flex-col gap-5">
                                     <h5 className="text-[16px] font-bold text-white!">Follow us</h5>
                                     <div className="flex gap-4">
-                                        <Link href="#" className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#08949E] transition-all duration-300">
+                                        <Link href="#" className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white text-[#08949E] transition-all duration-300">
                                             <Facebook className="w-4 h-4" />
                                         </Link>
-                                        <Link href="#" className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#08949E] transition-all duration-300">
+                                        <Link href="#" className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white text-[#08949E] transition-all duration-300">
                                             <Linkedin className="w-4 h-4" />
                                         </Link>
-                                        <Link href="#" className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#08949E] transition-all duration-300">
+                                        <Link href="#" className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white text-[#08949E] transition-all duration-300">
                                             <Instagram className="w-4 h-4" />
                                         </Link>
                                     </div>

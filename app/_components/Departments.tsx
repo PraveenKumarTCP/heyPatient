@@ -21,17 +21,17 @@ export const Departments = () => {
                     {/* Background Image and Overlay */}
                     <div className="absolute inset-0 z-0">
                         <img
-                            src="/images/home/bg-overlay.jpg"
+                            src="/images/home/dept-bg.png"
                             alt="Background"
-                            className="w-full h-full object-cover opacity-30"
+                            className="w-full h-full object-cover "
                         />
-                        <div className="absolute inset-0 bg-[#08949E] mix-blend-multiply opacity-90"></div>
+
                     </div>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12 relative z-10" data-aos="fade-up">
-                            <h2 className="text-white! font-medium mb-2 text-[15px]">Discover Our Specialized Departments</h2>
-                            <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-semibold max-w-2xl mx-auto leading-tight text-white!">
+                            <h2 className="text-white! text-[22px]! font-medium mb-2">Discover Our Specialized Departments</h2>
+                            <h3 className="text-2xl md:text-[28px] lg:text-[30px] font-semibold max-w-2xl mx-auto leading-tight text-white!">
                                 A Comprehensive Digital Patient Portal for Seamless Access to Your Care
                             </h3>
                         </div>
@@ -39,19 +39,19 @@ export const Departments = () => {
                         <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10" data-aos="fade-up" data-aos-delay="200">
                             {departments.map((dept, idx) => (
                                 <div key={idx} className="bg-white text-[#1E293B] p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 text-center flex flex-col items-center justify-start h-[16rem]">
-                                    <div className="flex justify-center mb-4 h-14">
+                                    <div className="flex justify-center mb-4 h-20">
                                         <img src={dept.img} alt={dept.title} className="object-contain" />
                                     </div>
-                                    <h4 className="text-[17px] font-bold mb-3">{dept.title}</h4>
-                                    <p className="text-[#64748B] text-[13px] leading-relaxed">{dept.desc}</p>
+                                    <h4 className="lg:text-[24px] text-[18px] font-bold mb-3">{dept.title}</h4>
+                                    <p className="lg:text-[13px] text-[11px] text-[#64748B] leading-relaxed">{dept.desc}</p>
                                 </div>
                             ))}
 
                             {/* 6th Card: Explore Medical Department */}
                             <div className="bg-[#036870] text-white p-8 rounded-xl shadow-lg transition-transform duration-300 relative overflow-hidden h-[16rem] group">
                                 <div className="relative z-10 h-full flex flex-col justify-start">
-                                    <h4 className="text-xl text-white! font-bold mb-6 mt-2 max-w-[80%] leading-tight">Explore Medical<br />Department</h4>
-                                    <button className="bg-white text-[#08949E] text-xs font-semibold py-2 px-4 rounded-full flex items-center gap-2 w-max hover:bg-gray-100 transition-colors">
+                                    <h4 className="text-2xl! text-white! font-bold mb-6 mt-2 max-w-[80%] leading-tight">Explore Medical<br />Department</h4>
+                                    <button className="bg-white text-[#08949E] text-sm font-semibold py-3 px-6 rounded-full flex items-center gap-2 w-max hover:bg-gray-100 transition-colors">
                                         Visit our Portal <ArrowUpRight className="w-4 h-4" />
                                     </button>
                                 </div>

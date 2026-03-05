@@ -10,8 +10,8 @@ export const Features = () => {
 
                     {/* Header text spanning full width */}
                     <div className="mb-12 max-w-5xl" data-aos="fade-up">
-                        <h2 className="text-[#08949E]! font-bold text-[18px] mb-6">About Heypatients</h2>
-                        <h3 className="text-[24px] md:text-[32px] font-bold text-[#1E293B] leading-[1.3] tracking-tight">
+                        <h2 className="text-[#08949E]! font-bold text-[22px]! mb-6">About Heypatients</h2>
+                        <h3 className="text-[24px] md:text-[32px] font-bold! text-[#1E293B] leading-[1.3] tracking-tight">
                             The company offers a modern patient portal that streamlines the entire care journey from appointment scheduling and digital registration to automated reminders and secure information sharing.
                         </h3>
                     </div>
@@ -21,7 +21,7 @@ export const Features = () => {
 
                         {/* Left Column: Image Area */}
                         <div data-aos="fade-right" data-aos-duration="1000">
-                            <div className="relative w-full aspect-[4/3] bg-[#F1F5F9] rounded-sm flex items-center justify-center p-8">
+                            <div className="relative w-full aspect-[4/3] bg-[#F1F1F1] rounded-sm flex items-center justify-center p-8">
                                 <img
                                     src="/images/home/abt.png"
                                     alt="Platform Screenshot"

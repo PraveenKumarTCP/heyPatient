@@ -12,9 +12,9 @@ export const VideoBanner = () => {
 
                         {/* Left Side: Video Content */}
                         <div data-aos="fade-right" data-aos-duration="1000">
-                            <div className="relative w-full aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
+                            <div className="relative w-full aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
                                 <video
-                                    src="https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_01.webm"
+                                    src="https://cdn.clinicalvisuals.com/medical/heypatient/video_2.webm"
                                     autoPlay
                                     muted
                                     loop
@@ -26,11 +26,11 @@ export const VideoBanner = () => {
 
                         {/* Right Side: Text Content */}
                         <div data-aos="fade-left" data-aos-duration="1000" className="flex flex-col">
-                            <h3 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#08949E] leading-tight mb-8">
+                            <h3 className="text-[24px] md:text-[28px] font-bold text-[#08949E]! leading-tight mb-8">
                                 The Patient Portal that simplifies your<br className="hidden md:block" /> everyday work.
                             </h3>
 
-                            <p className="text-[15px] text-[#64748B] mb-10 leading-[1.8] max-w-lg">
+                            <p className=" mb-10 text-justify leading-[1.8] max-w-xl">
                                 You want patients who are well prepared, at the right time and in the right place with up-to-date information and smooth processes. Our functional modules guide patients, automate key steps and create a digital experience that delivers measurable impact. Let's get started together.
                             </p>
 

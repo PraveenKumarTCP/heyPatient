@@ -8,16 +8,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #08949E;
-  --secondary: #08949E;
-  --dark: #067a82;
-  --text-dark: #1E293B;
-  --text-light: #64748B;
+  --primary: #008A8A;
+  --primary-light: #00A3A3;
+  --primary-dark: #005454;
+  --secondary: #00A3A3;
+  --dark: #005454;
+  --text-dark: #000000;
+  --text-light: #666666;
   --bg-light: #F8FAFC;
 }
 
 @theme inline {
   --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
   --color-dark: var(--dark);
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -36,7 +40,7 @@ body {
 p {
   font-size: 16px;
   line-height: 1.6;
-  color: var(--text-light);
+  color: var(--text-dark);
   font-weight: 400;
 }
 
